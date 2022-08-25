@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import logo from "../icons/logo.svg";
 
 
-const Card = ({ sprite, time }) => {
+const Card = ({ sprite, time, compareCards }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
   const showTime = time * 1000
@@ -22,9 +22,9 @@ const Card = ({ sprite, time }) => {
   }, []);
 
   const flip = () => {
-    if (showPhase) return;
+    if (showPhase || flipped) return;
     setFlipped(true);
-    //TODO: Comparar ID
+    compareCards(sprite.id)
   };
 
   return (

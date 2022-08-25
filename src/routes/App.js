@@ -8,17 +8,28 @@ function App() {
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
 
+  const levelUp = () => {
+    setLevel((prev) => prev + 1);
+  };
 
-
-
-
+  const scoreUp = () => {
+    setScore((prev) => prev + 1)
+  }
 
   return (
     <>
       <LinkButton path="/">Go Back</LinkButton>
-      <p>Score: {score} - Level: {level}</p>
+      <p>
+        Score: {score} - Level: {level}
+      </p>
       <div className="Board">
-        <Board numberOfCards={levels[level]["numberOfCards"]} time={levels[level]["time"]} />
+        <Board
+          numberOfCards={levels[level]["numberOfCards"]}
+          time={levels[level]["time"]}
+          levelUp={levelUp}
+          scoreUp={scoreUp}
+          key={level}
+        />
       </div>
     </>
   );
