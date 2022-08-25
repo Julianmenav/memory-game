@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import logo from "../icons/logo.svg";
 
-const SHOW_TIME_SC = 3 * 1000;
 
-const Card = ({ sprite }) => {
+const Card = ({ sprite, time }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
+  const showTime = time * 1000
 
   //ComponentWillMount
   useEffect(() => {
@@ -17,7 +17,7 @@ const Card = ({ sprite }) => {
       setTimeout(() => {
         setFlipped(false);
         setShowPhase(false);
-      }, SHOW_TIME_SC);
+      }, showTime);
     }, 1000);
   }, []);
 
