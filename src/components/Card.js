@@ -19,7 +19,8 @@ const Card = ({ sprite, time, compareCards }) => {
         setShowPhase(false);
       }, showTime_seconds);
     }, 1000);
-  }, [showTime_seconds]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const flip = () => {
     if (showPhase || flipped) return;

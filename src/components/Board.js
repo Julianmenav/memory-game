@@ -34,7 +34,8 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     return () => {
       console.log("Desmontando tablero");
     };
-  }, [numberOfCards]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const compareCards = (spriteID) => {
     //Flip first card of a pair.
