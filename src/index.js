@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./routes/App";
 import Home from "./routes/Home";
 import reportWebVitals from "./reportWebVitals";
+import NoPage from "./routes/NoPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route path="/" >
           <Route index element={<Home />} />
           <Route path="game" element={<App />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
