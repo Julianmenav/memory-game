@@ -5,7 +5,6 @@ const getCards = async (numberOfCards) => {
 
   //Get X random numbers which refer to X random pokemons sprites
   while (randomNumbers.length < numberOfCards) {
-    console.log("obteniendo un numerito")
     let randomNumber = Math.floor((Math.random() * numberOfPokemons)) + 1;
     if (!randomNumbers.includes(randomNumber)) {
       randomNumbers.push(randomNumber);
