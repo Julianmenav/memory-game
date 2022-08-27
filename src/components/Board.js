@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
   const [loading, setLoading] = useState(false);
   const [loss, setLoss] = useState(false);
-  const [lastID, setLastID] = useState([]);
+  const [idArray, setIdArray] = useState([]);
   const [splittedCards, setSplittedCards] = useState({
     firstRowOfCards: [],
     secondRowOfCards: [],
@@ -34,22 +34,23 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     return () => {
       console.log("Desmontando tablero");
     };
-  }, []);
+  }, [numberOfCards]);
 
   const compareCards = (spriteID) => {
-    //Flip first card.
-    if (lastID.length % 2 === 0) {
-      return setLastID((prev) => [...prev, spriteID]);
+    //Flip first card of a pair.
+    if (idArray.length % 2 === 0) {
+      return setIdArray((prev) => [...prev, spriteID]);
     }
     //Loss
-    if (lastID.slice(-1)[0] !== spriteID) {
+    const lastID = idArray.slice(-1)[0]
+    if (lastID !== spriteID) {
       return setTimeout(() => setLoss(true), 1000);
     }
-    //If Correct pair card:
-    setLastID((prev) => [...prev, spriteID]);
+    //If Correct pair card, add id to the array:
+    setIdArray((prev) => [...prev, spriteID]);
     scoreUp();
     //If all cards are flipped
-    if (lastID.length === numberOfCards - 1) {
+    if (idArray.length === numberOfCards - 1) {
       setTimeout(() => levelUp(), 1000)
     }
   };
@@ -92,6 +93,9 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
 
 Board.propTypes = {
   numberOfCards: PropTypes.number,
+  time: PropTypes.number,
+  levelUp: PropTypes.func, 
+  scoreUp: PropTypes.func
 };
 
 export default Board;

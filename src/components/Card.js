@@ -6,7 +6,7 @@ import logo from "../icons/logo.svg";
 const Card = ({ sprite, time, compareCards }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
-  const showTime = time * 1000
+  const showTime_seconds = time * 1000
 
   //ComponentWillMount
   useEffect(() => {
@@ -17,9 +17,9 @@ const Card = ({ sprite, time, compareCards }) => {
       setTimeout(() => {
         setFlipped(false);
         setShowPhase(false);
-      }, showTime);
+      }, showTime_seconds);
     }, 1000);
-  }, []);
+  }, [showTime_seconds]);
 
   const flip = () => {
     if (showPhase || flipped) return;
@@ -46,6 +46,8 @@ Card.propTypes = {
     id: PropTypes.number,
     img: PropTypes.string,
   }),
+  compareCards: PropTypes.func,
+  time: PropTypes.number
 };
 
 export default Card;
