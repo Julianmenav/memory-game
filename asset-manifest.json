@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/https//julianmenav.github.io/react-memory-game/static/css/main.2de03fd6.css",
+    "main.js": "/https//julianmenav.github.io/react-memory-game/static/js/main.242cb9e8.js",
+    "static/js/787.d8f3d465.chunk.js": "/https//julianmenav.github.io/react-memory-game/static/js/787.d8f3d465.chunk.js",
+    "static/media/tablero.png": "/https//julianmenav.github.io/react-memory-game/static/media/tablero.07f94bc6759b5d2062df.png",
+    "static/media/home.png": "/https//julianmenav.github.io/react-memory-game/static/media/home.3e37edc7ec149d3d4c9d.png",
+    "static/media/card_back.png": "/https//julianmenav.github.io/react-memory-game/static/media/card_back.a70302b6211618b6f289.png",
+    "index.html": "/https//julianmenav.github.io/react-memory-game/index.html",
+    "main.2de03fd6.css.map": "/https//julianmenav.github.io/react-memory-game/static/css/main.2de03fd6.css.map",
+    "main.242cb9e8.js.map": "/https//julianmenav.github.io/react-memory-game/static/js/main.242cb9e8.js.map",
+    "787.d8f3d465.chunk.js.map": "/https//julianmenav.github.io/react-memory-game/static/js/787.d8f3d465.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2de03fd6.css",
+    "static/js/main.242cb9e8.js"
+  ]
+}
