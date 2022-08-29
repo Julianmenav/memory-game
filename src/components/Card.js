@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import backImage from "../images/card_back.png";
 
 
-const Card = ({ sprite, time, compareCards }) => {
+const Card = ({ sprite, time, compareCards, loss }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
   const showTime_seconds = time * 1000
@@ -23,7 +23,7 @@ const Card = ({ sprite, time, compareCards }) => {
   }, []);
 
   const flip = () => {
-    if (showPhase || flipped) return;
+    if (showPhase || flipped || loss) return;
     setFlipped(true);
     compareCards(sprite.id)
   };

@@ -45,7 +45,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     //Loss
     const lastID = idArray.slice(-1)[0]
     if (lastID !== spriteID) {
-      return setTimeout(() => setLoss(true), 1000);
+      return setTimeout(() => setLoss(true), 500);
     }
     //If Correct pair card, add id to the array:
     setIdArray((prev) => [...prev, spriteID]);
@@ -56,14 +56,11 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     }
   };
 
-  return loss ? (
-    <>
-      <h1>Has perdido.</h1>
-    </>
-  ) : loading ? (
+  return loading ? (
     <h1>Cargando...</h1>
   ) : (
     <>
+      {loss ? <h1 className="lossMessage">GAME OVER</h1> : null}
       <div>
         {splittedCards.firstRowOfCards.map((el, idx) => {
           return (
@@ -72,6 +69,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
               key={idx}
               time={time}
               compareCards={compareCards}
+              loss={loss}
             />
           );
         })}
@@ -84,6 +82,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
               key={idx}
               time={time}
               compareCards={compareCards}
+              loss={loss}
             />
           );
         })}
