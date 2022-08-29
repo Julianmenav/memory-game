@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import logo from "../icons/logo.svg";
+import backImage from "../images/card_back.png";
 
 
 const Card = ({ sprite, time, compareCards }) => {
@@ -35,7 +35,7 @@ const Card = ({ sprite, time, compareCards }) => {
           <img src={sprite.img} alt="front" />
         </div>
         <div className="flip-card-back">
-          <img src={logo} alt="back" />
+          <img src={backImage} alt="back" />
         </div>
       </div>
     </div>

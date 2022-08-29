@@ -1,0 +1,129 @@
+:root{
+  font-size: 62.5%
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
+.Board {
+  position: relative;
+  margin: auto;
+  width: 85vw;
+  height: min(45vw, 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  background-image: url("../images/tablero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+ 
+}
+
+.Board > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flip-card-button {
+  width: 8vw;
+  height: 10vw;
+}
+
+.flip-card-button * {
+  pointer-events: none;
+  user-select: none;
+  border-radius: 10px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.hover-trigger {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  border: 0.2vw solid black;
+}
+
+.flip-card-front {
+  background-color: rgb(214, 232, 255);
+}
+
+.flip-card-back {
+  background-color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+.flip-card-front > img {
+  width: 8vw;
+  height: 8vw;
+  margin: auto;
+}
+
+.flip-card-back > img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(1.75)
+}
+
+.level , .score{
+  position: absolute;
+  text-align: center;
+  font-family:  "Courier", "monospace";
+  font-weight: bold;
+  color: rgb(177, 219, 25);
+  background-color: rgba(3, 1, 1, 0.342);
+  border-radius: 5px;
+}
+
+.score {
+  top: 1%;
+  margin: -10;
+  left: 3%;
+  font-size: 4vw;
+}
+
+.level {
+  bottom: 0.5%;
+  left: 3%;
+  font-size: 2vw;
+}
+
+.app > .linkButton {
+  position: absolute;
+  bottom: 1%;
+  right: 0.5%;
+  background-color: rgba(24, 24, 24, 0.733);
+  color: rgb(233, 178, 59);
+  font-size: max(4vw , 3vh);
+  font-weight: bold;
+  border-radius: 10px;
+}

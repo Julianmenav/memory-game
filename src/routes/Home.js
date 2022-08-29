@@ -1,12 +1,14 @@
 import React from "react";
 import LinkButton from "../components/LinkButton";
+import "./Home.css";
 
 const Home = () => {
   return (
     <div className="homePage">
-      <h1>Juego de Memoria</h1>
-      <h3>Trata de emparejar correctamente las cartas que se muestren</h3>
-      <LinkButton path="game">START</LinkButton>
+      <div className="title">
+        <h1>BUSCA LAS PAREJAS</h1>
+      </div>
+      <LinkButton path="game">JUGAR</LinkButton>
       <div className="author">
         Designed and Coded by <br />
         <a

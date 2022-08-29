@@ -1,0 +1,53 @@
+:root{
+  font-size: 62.5%
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  width: 50vw;
+  color: rgb(240, 240, 240);
+  background-color: rgba(0, 0, 0, 0.432);
+  font-size: max(3vw, 2vh);
+  padding: 10px;
+  border-radius: 4rem;
+  text-align: center;
+  font-family: "impact", "fantasy";
+}
+
+.homePage > .linkButton {
+  background-color: rgba(24, 24, 24, 0.733);
+  color: rgb(233, 178, 59);
+  font-size: max(4vw , 3vh);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.author {
+ text-align: center;
+ font-family:  "Courier", "monospace";
+ color: #b0d3f5;
+ background-color:rgba(7, 17, 22, 0.863);
+ padding: 10px;
+}
+
+.author>a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
