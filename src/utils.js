@@ -25,11 +25,10 @@ const getCards = async (numberOfCards) => {
 
 //Input: Array of objects. Output: 2 shuffle arrays of objects.
 const shuffleCards = (cards) => {
-  const length = cards.length;
   const duplicatedArray = [...cards, ...cards];
   const randomArray = [...duplicatedArray].sort(() => Math.random() - 0.5);
 
-  return [randomArray.slice(0, length), randomArray.slice(length)];
+  return randomArray;
 };
 
 export { getCards, shuffleCards };

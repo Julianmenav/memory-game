@@ -7,10 +7,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
   const [loading, setLoading] = useState(false);
   const [loss, setLoss] = useState(false);
   const [idArray, setIdArray] = useState([]);
-  const [splittedCards, setSplittedCards] = useState({
-    firstRowOfCards: [],
-    secondRowOfCards: [],
-  });
+  const [cards, setCards] = useState([]);
 
   //When the components is rendered for the first time it gets sprites for cards from an API.
   useEffect(() => {
@@ -19,13 +16,10 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     const getSprites = async () => {
       //We only need half of the total number of cards since they go in pairs.
       const numberOfCardsNeeded = numberOfCards / 2;
-      const cards = await getCards(numberOfCardsNeeded);
+      const uniqueCards = await getCards(numberOfCardsNeeded);
       //They are randomly ordered and divided into 2 groups
-      const [firstRow, secondRow] = shuffleCards(cards);
-      setSplittedCards({
-        firstRowOfCards: firstRow,
-        secondRowOfCards: secondRow,
-      });
+      const randomCards = shuffleCards(uniqueCards);
+      setCards(randomCards)
 
       setLoading(false);
     };
@@ -61,21 +55,8 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
   ) : (
     <>
       {loss ? <h1 className="lossMessage">GAME OVER</h1> : null}
-      <div>
-        {splittedCards.firstRowOfCards.map((el, idx) => {
-          return (
-            <Card
-              sprite={el}
-              key={idx}
-              time={time}
-              compareCards={compareCards}
-              loss={loss}
-            />
-          );
-        })}
-      </div>
-      <div>
-        {splittedCards.secondRowOfCards.map((el, idx) => {
+      <div className="shuffleCards">
+        {cards.map((el, idx) => {
           return (
             <Card
               sprite={el}
