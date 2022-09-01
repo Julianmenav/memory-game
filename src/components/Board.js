@@ -3,7 +3,7 @@ import Card from "./Card";
 import { getCards, shuffleCards } from "../utils";
 import PropTypes from "prop-types";
 
-const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
+const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   const [loading, setLoading] = useState(false);
   const [loss, setLoss] = useState(false);
   const [idArray, setIdArray] = useState([]);
@@ -19,7 +19,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
       const uniqueCards = await getCards(numberOfCardsNeeded);
       //They are randomly ordered and divided into 2 groups
       const randomCards = shuffleCards(uniqueCards);
-      setCards(randomCards)
+      setCards(randomCards);
 
       setLoading(false);
     };
@@ -28,7 +28,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     return () => {
       console.log("Desmontando tablero");
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const compareCards = (spriteID) => {
@@ -37,7 +37,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
       return setIdArray((prev) => [...prev, spriteID]);
     }
     //Loss
-    const lastID = idArray.slice(-1)[0]
+    const lastID = idArray.slice(-1)[0];
     if (lastID !== spriteID) {
       return setLoss(true);
     }
@@ -46,15 +46,22 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
     scoreUp();
     //If all cards are flipped
     if (idArray.length === numberOfCards - 1) {
-      setTimeout(() => levelUp(), 1000)
+      setTimeout(() => levelUp(), 1000);
     }
   };
+
+  const gameOverElement = (
+    <>
+      <h1 className="lossMessage">GAME OVER</h1>
+      <button className="restartButton" onClick={restart}>REINICIAR PARTIDA</button>
+    </>
+  )
 
   return loading ? (
     <h1>Cargando...</h1>
   ) : (
     <>
-      {loss ? <h1 className="lossMessage">GAME OVER</h1> : null}
+      {loss ? gameOverElement : null}
       <div className="shuffleCards">
         {cards.map((el, idx) => {
           return (
@@ -75,7 +82,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp }) => {
 Board.propTypes = {
   numberOfCards: PropTypes.number,
   time: PropTypes.number,
-  levelUp: PropTypes.func, 
+  levelUp: PropTypes.func,
   scoreUp: PropTypes.func
 };
 

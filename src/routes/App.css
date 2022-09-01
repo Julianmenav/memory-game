@@ -135,11 +135,23 @@ body{
 
 .lossMessage {
   position: absolute;
+  top: 25%;
   margin: auto;
-  text-align: center;
   color: rgb(255, 0, 0);
-  background-color: rgba(243, 243, 243, 0.714);
-  font-size: 4vw;
+  background-color: rgba(0, 0, 0, 0.714);
+  font-size: 5vw;
   padding: 1px;
   border-radius: 10px;
+  z-index: 1;
+}
+
+.restartButton{
+  position: absolute;
+  margin: auto;
+  background-color: rgba(24, 24, 24, 0.733);
+  color: rgb(233, 178, 59);
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 10px;   
+  z-index: 1;                                                          
 }
