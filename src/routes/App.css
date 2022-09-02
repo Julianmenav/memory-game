@@ -25,6 +25,7 @@ body{
   flex-direction: column;
   justify-content:center;
   align-items: center;
+  background-color: rgb(139, 50, 9);
   background-image: url("../images/tablero.png");
   background-size: cover;
   background-repeat: no-repeat;
