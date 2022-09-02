@@ -156,3 +156,32 @@ body{
   border-radius: 10px;   
   z-index: 1;                                                          
 }
+
+@media screen and (orientation: portrait) {
+  /* vertical screen css*/
+  .Board {
+    height: 80%;
+  }
+
+  .Board > .shuffleCards {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .flip-card-button {
+    width: 10vh;
+    height: 12vh;
+  }
+  .flip-card-front > img {
+    width: 8vh;
+    height: 8vh;
+    margin: auto;
+  }
+
+  .score {
+    font-size: 4vh;
+  }
+  
+  .level {
+    font-size: 2vh;
+  }
+ } 
