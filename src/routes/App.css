@@ -160,11 +160,14 @@ body{
 @media screen and (orientation: portrait) {
   /* vertical screen css*/
   .Board {
-    height: 80%;
+    height: 80vh;
+    width: 90vw;
   }
 
   .Board > .shuffleCards {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow:row;
   }
 
   .flip-card-button {

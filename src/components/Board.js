@@ -57,12 +57,18 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     </>
   )
 
+  const cardsOrganization = numberOfCards >= 12 ? {
+    gridTemplateColumns: "none",
+    gridTemplateRows: "repeat(3, 1fr)",
+    gridAutoFlow: "column"
+  } : null
+
   return loading ? (
     <h1>Cargando...</h1>
   ) : (
     <>
       {loss ? gameOverElement : null}
-      <div className="shuffleCards">
+      <div className="shuffleCards" style={cardsOrganization}>
         {cards.map((el, idx) => {
           return (
             <Card
