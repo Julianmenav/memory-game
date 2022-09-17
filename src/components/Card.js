@@ -7,6 +7,7 @@ const Card = ({ sprite, time, compareCards, loss }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
   const showTime_seconds = time * 1000
+  const COVERED_CARD_TIME_MS = 1750
 
   //ComponentWillMount
   useEffect(() => {
@@ -18,7 +19,7 @@ const Card = ({ sprite, time, compareCards, loss }) => {
         setFlipped(false);
         setShowPhase(false);
       }, showTime_seconds);
-    }, 1000);
+    }, COVERED_CARD_TIME_MS);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
