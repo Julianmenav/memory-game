@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-memory-game/static/css/main.ad16dbdd.css",
-    "main.js": "/react-memory-game/static/js/main.7a094918.js",
+    "main.js": "/react-memory-game/static/js/main.ca834a65.js",
     "static/media/tablero.png": "/react-memory-game/static/media/tablero.d016b7fa000986f88f4d.png",
     "static/media/home.png": "/react-memory-game/static/media/home.61117bd7d5f68f400391.png",
     "static/media/card_back.png": "/react-memory-game/static/media/card_back.a70302b6211618b6f289.png",
     "index.html": "/react-memory-game/index.html",
     "main.ad16dbdd.css.map": "/react-memory-game/static/css/main.ad16dbdd.css.map",
-    "main.7a094918.js.map": "/react-memory-game/static/js/main.7a094918.js.map"
+    "main.ca834a65.js.map": "/react-memory-game/static/js/main.ca834a65.js.map"
   },
   "entrypoints": [
     "static/css/main.ad16dbdd.css",
-    "static/js/main.7a094918.js"
+    "static/js/main.ca834a65.js"
   ]
 }
