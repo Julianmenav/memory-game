@@ -29,7 +29,6 @@ function App() {
   return (
     <div className="app">
       <div className="Board">
-        <div className="score">PUNTUACION:{score}</div>
         <Board
           numberOfCards={levels[level]["numberOfCards"]}
           time={levels[level]["time"]}
@@ -38,8 +37,9 @@ function App() {
           restart={restart}
           key={boardKey}
         />
-        <div className="level">
-          Nivel: {level}/{maxLevel}
+        <div className="statistics">
+          <div className="score">PUNTUACION:{score}</div>
+          <div className="level">Nivel: {level}/{maxLevel}</div>
         </div>
       </div>
       <LinkButton path="/">Volver</LinkButton>

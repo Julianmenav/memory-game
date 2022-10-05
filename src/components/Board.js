@@ -8,6 +8,11 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   const [loss, setLoss] = useState(false);
   const [idArray, setIdArray] = useState([]);
   const [cards, setCards] = useState([]);
+  const [showPhase, setShowPhase] = useState(false);
+  const [initialHide, setInitialHide] = useState(true);
+
+  const showTime_ms = time * 1000;
+  const COVERED_TIME_MS = 1750;
 
   //When the components is rendered for the first time it gets sprites for cards from an API.
   useEffect(() => {
@@ -31,6 +36,19 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  //controls dinamic guide message, following cards flips
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialHide(false);
+      setShowPhase(true);
+      
+      setTimeout(() => {
+        setShowPhase(false);
+      }, showTime_ms);
+    }, COVERED_TIME_MS);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const compareCards = (spriteID) => {
     //Flip first card of a pair.
     if (idArray.length % 2 === 0) {
@@ -50,6 +68,12 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     }
   };
 
+  const guideText = showPhase ? (
+    <div className="guideText memo">Memoriza las parejas!</div>
+  ) : initialHide ? (
+    <div className="guideText ready">Preparado?</div>
+  ) : null
+
   const gameOverElement = (
     <>
       <h1 className="lossMessage">GAME OVER</h1>
@@ -67,6 +91,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     <h1>Cargando...</h1>
   ) : (
     <>
+      {guideText}
       {loss ? gameOverElement : null}
       <div className="shuffleCards" style={cardsOrganization}>
         {cards.map((el, idx) => {
@@ -74,7 +99,8 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
             <Card
               sprite={el}
               key={idx}
-              time={time}
+              time={showTime_ms}
+              coveredTime={COVERED_TIME_MS}
               compareCards={compareCards}
               loss={loss}
             />

@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 import backImage from "../images/card_back.png";
 
 
-const Card = ({ sprite, time, compareCards, loss }) => {
+const Card = ({ sprite, time, coveredTime, compareCards, loss }) => {
   const [flipped, setFlipped] = useState(false);
   const [showPhase, setShowPhase] = useState(true);
-  const showTime_seconds = time * 1000
-  const COVERED_CARD_TIME_MS = 1750
 
   //ComponentWillMount
   useEffect(() => {
@@ -18,8 +16,8 @@ const Card = ({ sprite, time, compareCards, loss }) => {
       setTimeout(() => {
         setFlipped(false);
         setShowPhase(false);
-      }, showTime_seconds);
-    }, COVERED_CARD_TIME_MS);
+      }, time);
+    }, coveredTime);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
