@@ -4,19 +4,18 @@ import { getCards, shuffleCards } from "../utils";
 import PropTypes from "prop-types";
 
 const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [loss, setLoss] = useState(false);
   const [idArray, setIdArray] = useState([]);
   const [cards, setCards] = useState([]);
   const [showPhase, setShowPhase] = useState(false);
-  const [initialHide, setInitialHide] = useState(true);
+  const [initialHide, setInitialHide] = useState(false);
 
   const showTime_ms = time * 1000;
   const COVERED_TIME_MS = 1750;
 
   //When the components is rendered for the first time it gets sprites for cards from an API.
   useEffect(() => {
-    setLoading(true);
     console.count("Obteniendo cartas...");
     const getSprites = async () => {
       //We only need half of the total number of cards since they go in pairs.
@@ -27,6 +26,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
       setCards(randomCards);
 
       setLoading(false);
+      setInitialHide(true);
     };
     getSprites();
 
