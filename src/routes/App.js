@@ -29,6 +29,7 @@ function App() {
   return (
     <div className="app">
       <div className="Board">
+        <div className="board-bg"></div>
         <Board
           numberOfCards={levels[level]["numberOfCards"]}
           time={levels[level]["time"]}

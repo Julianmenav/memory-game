@@ -9,6 +9,7 @@ import NoPage from "./routes/NoPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <div id="bg-image"></div>
     <HashRouter>
       <Routes>
         <Route path="/" >
