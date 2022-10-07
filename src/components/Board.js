@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { getCards, shuffleCards } from "../utils";
 import PropTypes from "prop-types";
+import boxHeader from "../images/boxHeader.svg"
 
 const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   const [loading, setLoading] = useState(true);
@@ -72,7 +73,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     <div className="guideText memo">Memoriza las parejas!</div>
   ) : initialHide ? (
     <div className="guideText ready">Preparado?</div>
-  ) : null
+  ) : <div className="guideText memo">Memoriza las parejas!</div>
 
   const gameOverElement = (
     <>
@@ -91,7 +92,10 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     <h1>Cargando...</h1>
   ) : (
     <>
-      {guideText}
+      <div className="guideTextContainer" >
+        <img src={boxHeader} alt="" />
+        {guideText}
+      </div>
       {loss ? gameOverElement : null}
       <div className="shuffleCards" style={cardsOrganization}>
         {cards.map((el, idx) => {

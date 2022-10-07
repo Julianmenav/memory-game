@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import backImage from "../images/card_back.png";
+import backImage from "../images/card_back.svg";
 
 
 const Card = ({ sprite, time, coveredTime, compareCards, loss }) => {
