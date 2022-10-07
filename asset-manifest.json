@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/react-memory-game/static/css/main.13008cc7.css",
-    "main.js": "/react-memory-game/static/js/main.79731623.js",
-    "static/media/tablero.png": "/react-memory-game/static/media/tablero.d016b7fa000986f88f4d.png",
-    "static/media/home.png": "/react-memory-game/static/media/home.61117bd7d5f68f400391.png",
-    "static/media/card_back.png": "/react-memory-game/static/media/card_back.a70302b6211618b6f289.png",
+    "main.css": "/react-memory-game/static/css/main.93e89e59.css",
+    "main.js": "/react-memory-game/static/js/main.fd1bd922.js",
+    "static/media/boxHeader.svg": "/react-memory-game/static/media/boxHeader.e0d75d6addb6d754f705272fad090d2d.svg",
+    "static/media/fondoCentroPokemon.svg": "/react-memory-game/static/media/fondoCentroPokemon.1f0c5b108be5009748cd.svg",
+    "static/media/tablero.svg": "/react-memory-game/static/media/tablero.72b42d244c215c7bb352.svg",
+    "static/media/card_back.svg": "/react-memory-game/static/media/card_back.2ae0642be9eed496c277983353a83eb1.svg",
     "index.html": "/react-memory-game/index.html",
-    "main.13008cc7.css.map": "/react-memory-game/static/css/main.13008cc7.css.map",
-    "main.79731623.js.map": "/react-memory-game/static/js/main.79731623.js.map"
+    "main.93e89e59.css.map": "/react-memory-game/static/css/main.93e89e59.css.map",
+    "main.fd1bd922.js.map": "/react-memory-game/static/js/main.fd1bd922.js.map"
   },
   "entrypoints": [
-    "static/css/main.13008cc7.css",
-    "static/js/main.79731623.js"
+    "static/css/main.93e89e59.css",
+    "static/js/main.fd1bd922.js"
   ]
 }
