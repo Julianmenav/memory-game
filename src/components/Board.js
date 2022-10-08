@@ -73,7 +73,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     <div className="guideText memo">Memoriza las parejas!</div>
   ) : initialHide ? (
     <div className="guideText ready">Preparado?</div>
-  ) : <div className="guideText memo">Memoriza las parejas!</div>
+  ) : null;
 
   const gameOverElement = (
     <>
