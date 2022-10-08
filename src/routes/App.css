@@ -178,7 +178,7 @@ body{
 
   .board-bg{
     transform: rotate(90deg);
-    height: 95vw;
+    height: 90vw;
     width: min(90vh, 140vw);
   }
 
@@ -220,3 +220,10 @@ body{
     font-size: 2vh;
   }
  } 
+
+@media (max-width: 560px) {
+  .board-bg {
+    background-size: auto, 100%;
+  }
+
+}

@@ -17,9 +17,9 @@ code {
 }
 
 #bg-image {
-  background-image: url("./images/fondoCentroPokemon.svg");
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  background-image: url("./images/pokemonCenterBg.svg");
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   height: 100%;
   width: 100%;
   z-index: -999;

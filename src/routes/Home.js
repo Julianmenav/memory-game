@@ -1,12 +1,13 @@
 import React from "react";
 import LinkButton from "../components/LinkButton";
 import "./Home.css";
+import title from '../images/title.svg'
 
 const Home = () => {
   return (
     <div className="homePage">
       <div className="title">
-        <h1>BUSCA LAS PAREJAS</h1>
+        <img src={title} alt="" />
       </div>
       <LinkButton path="game">JUGAR</LinkButton>
       <div className="author">
