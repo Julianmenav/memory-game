@@ -20,14 +20,6 @@ body{
   filter: brightness(120%);
 }
 
-.homePage > .linkButton {
-  background-color: rgba(24, 24, 24, 0.733);
-  color: rgb(233, 178, 59);
-  font-size: max(4vw , 3vh);
-  font-weight: bold;
-  border-radius: 10px;
-}
-
 .author {
  text-align: center;
  font-family:  "Courier", "monospace";

@@ -28,3 +28,26 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.linkButton {
+  width: 20rem;
+  height: 7rem;
+  background: linear-gradient(90deg, rgba(220,91,90,1) 0%, rgba(214,47,45,1) 100%);
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0px 10px #8b2722;
+  border: none;
+}
+
+.linkButton:hover {
+  background: rgba(214,47,45,1);
+}
+
+.linkButton:active {
+  background: rgba(214,47,45,1);
+  box-shadow: 0px 6px #8b2722;
+  transform: translateY(4px);
+}

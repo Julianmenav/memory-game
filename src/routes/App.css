@@ -137,13 +137,8 @@ body{
 
 .app > .linkButton {
   position: absolute;
-  bottom: 1%;
-  right: 0.5%;
-  background-color: rgba(24, 24, 24, 0.733);
-  color: rgb(233, 178, 59);
-  font-size: max(4vw , 3vh);
-  font-weight: bold;
-  border-radius: 10px;
+  bottom: 4%;
+  right: 2%;
 }
 
 .lossMessage {
@@ -167,63 +162,4 @@ body{
   font-weight: bold;
   border-radius: 10px;   
   z-index: 1;                                                          
-}
-
-@media screen and (orientation: portrait) {
-  /* vertical screen css*/
-  .Board {
-    height: min(90vh, 140vw);
-    width: 85vw;
-  }
-
-  .board-bg{
-    transform: rotate(90deg);
-    height: 90vw;
-    width: min(90vh, 140vw);
-  }
-
-  .Board > .shuffleCards {
-    grid-template-rows: none;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow:row;
-  }
-
-  .guideTextContainer {
-    position: absolute;
-    width: min(90vw, 465px);
-    top: 0px;
-    transform: translate(0, -50%)
-  }
-
-  .guideTextContainer > img {
-    width: min(90vw, 465px);
-  }
-  
-  .guideText {
-    width: 100%;
-    font-size: min(1.65em, 7vw);
-  }
-
-  .flip-card-button {
-    width: min(20vw, 8em);
-    height: min(25vw, 10em);
-  }
-  .flip-card-front > img, .flip-card-back > img {
-    width: 80%;
-  }
-
-  .score {
-    font-size: 4vh;
-  }
-  
-  .level {
-    font-size: 2vh;
-  }
- } 
-
-@media (max-width: 560px) {
-  .board-bg {
-    background-size: auto, 100%;
-  }
-
 }
