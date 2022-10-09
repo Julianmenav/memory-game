@@ -6,7 +6,7 @@ import levels from "../models/levels";
 
 function App() {
   const [score, setScore] = useState(0);
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(10);
   const [boardKey, setBoardKey] = useState(0);
   const maxLevel = 16;
 
@@ -38,12 +38,10 @@ function App() {
           restart={restart}
           key={boardKey}
         />
-        <div className="statistics">
-          <div className="score">PUNTUACION:{score}</div>
-          <div className="level">Nivel: {level}/{maxLevel}</div>
-        </div>
+        <div className="score statistics">Puntuación: {score}</div>
+        <div className="level statistics">Nivel: {level}/{maxLevel}</div>
       </div>
-      <LinkButton path="/">Volver</LinkButton>
+          <LinkButton path="/">Volver</LinkButton>
     </div>
   );
 }

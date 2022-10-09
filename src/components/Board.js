@@ -70,9 +70,9 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   };
 
   const guideText = showPhase ? (
-    <div className="guideText memo">Memoriza las parejas!</div>
+    <div className="guideText memo">¡Memoriza las parejas!</div>
   ) : initialHide ? (
-    <div className="guideText ready">Preparado?</div>
+    <div className="guideText ready">¿Preparado?</div>
   ) : null;
 
   const gameOverElement = loss ? (
