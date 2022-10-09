@@ -75,12 +75,14 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     <div className="guideText ready">Preparado?</div>
   ) : null;
 
-  const gameOverElement = (
-    <>
-      <h1 className="lossMessage">GAME OVER</h1>
+  const gameOverElement = loss ? (
+    <div className="gameOverContainer">
+      <div className="lossMessage">
+        <p>GAME OVER</p>
+      </div>
       <button className="restartButton" onClick={restart}>REINICIAR PARTIDA</button>
-    </>
-  )
+    </div>
+  ) : null;
 
   const cardsOrganization = numberOfCards >= 12 ? {
     gridTemplateColumns: "none",
@@ -96,7 +98,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
         <img src={boxHeader} alt="" />
         {guideText}
       </div>
-      {loss ? gameOverElement : null}
+      {gameOverElement}
       <div className="shuffleCards" style={cardsOrganization}>
         {cards.map((el, idx) => {
           return (
