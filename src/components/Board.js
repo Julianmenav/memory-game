@@ -58,7 +58,8 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     //Loss
     const lastID = idArray.slice(-1)[0];
     if (lastID !== spriteID) {
-      return setLoss(true);
+      
+      return setTimeout( () => {setLoss(true)}, 300);
     }
     //If Correct pair card, add id to the array:
     setIdArray((prev) => [...prev, spriteID]);

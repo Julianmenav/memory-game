@@ -6,7 +6,7 @@ import levels from "../models/levels";
 
 function App() {
   const [score, setScore] = useState(0);
-  const [level, setLevel] = useState(10);
+  const [level, setLevel] = useState(1);
   const [boardKey, setBoardKey] = useState(0);
   const maxLevel = 16;
 
