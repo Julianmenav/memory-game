@@ -16,8 +16,11 @@ body{
 }
 
 .title {
-  width: 50vw;
-  filter: brightness(120%);
+  display: flex;
+}
+.title > img {
+  width: 45vw;
+  margin: auto;
 }
 
 .author {
