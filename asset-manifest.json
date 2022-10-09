@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-memory-game/static/css/main.a19e402f.css",
-    "main.js": "/react-memory-game/static/js/main.c7012718.js",
+    "main.css": "/react-memory-game/static/css/main.0228149e.css",
+    "main.js": "/react-memory-game/static/js/main.d2c723d2.js",
     "static/media/boxHeader.svg": "/react-memory-game/static/media/boxHeader.e0d75d6addb6d754f705272fad090d2d.svg",
     "static/media/pokemonCenterBg.svg": "/react-memory-game/static/media/pokemonCenterBg.6d03542392292950f2a6.svg",
     "static/media/tablero.svg": "/react-memory-game/static/media/tablero.c8caebb11064fea5125c.svg",
     "static/media/card_back.svg": "/react-memory-game/static/media/card_back.2ae0642be9eed496c277983353a83eb1.svg",
-    "static/media/title.svg": "/react-memory-game/static/media/title.bab8396749110e1a17408fee30409b9d.svg",
+    "static/media/title.png": "/react-memory-game/static/media/title.324573f56a4f7ec19450.png",
     "index.html": "/react-memory-game/index.html",
-    "main.a19e402f.css.map": "/react-memory-game/static/css/main.a19e402f.css.map",
-    "main.c7012718.js.map": "/react-memory-game/static/js/main.c7012718.js.map"
+    "main.0228149e.css.map": "/react-memory-game/static/css/main.0228149e.css.map",
+    "main.d2c723d2.js.map": "/react-memory-game/static/js/main.d2c723d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a19e402f.css",
-    "static/js/main.c7012718.js"
+    "static/css/main.0228149e.css",
+    "static/js/main.d2c723d2.js"
   ]
 }
