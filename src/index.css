@@ -17,6 +17,7 @@ code {
 }
 
 #bg-image {
+  margin: 0;
   background-image: url("./images/pokemonCenterBg.svg");
   filter: blur(5px);
   -webkit-filter: blur(5px);
@@ -24,9 +25,13 @@ code {
   width: 100%;
   z-index: -999;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .linkButton {
