@@ -202,8 +202,43 @@ body{
   transform: translateY(4px);
 }
 
+
+@media (max-width: 870px) and (orientation: portrait){
+  .Board {
+    width: 98vw;
+    height: 72.6vw;
+    transform: translate(-50%, -60%);
+  }
+  .flip-card-button {
+    width: min(17vw, 8.5em);
+    height: min(21vw, 11em);
+  }
+  .flip-card-front > img, .flip-card-back > img {
+    width: 80%;
+  }
+
+  .guideTextContainer {
+    transform: translate(0, -70%)
+  }
+
+  .statistics {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    transform: translate(0, 70%);
+    font-size: 2vh;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+    z-index: 99;
+  }
+
+
+
+}
+
 /* mobile portrait */
-@media (max-width: 640px) and (orientation: portrait){
+@media (max-width: 470px) and (orientation: portrait){
   .Board {
     transform: translate(-50%, 0);
     top: 8%;
@@ -257,13 +292,7 @@ body{
     z-index: 99;
   }
 
-  .score {
-    left: 1em;
-  }
 
-  .level {
-    right: 1em;
-  }
 
   .app > .linkButton {
     transform: scale(0.6) translate(30%, 15%);
