@@ -202,6 +202,7 @@ body{
   transform: translateY(4px);
 }
 
+/* mobile portrait */
 @media (max-width: 640px) and (orientation: portrait){
   .Board {
     transform: translate(-50%, 0);
@@ -262,6 +263,59 @@ body{
 
   .level {
     right: 1em;
+  }
+
+  .app > .linkButton {
+    transform: scale(0.6) translate(30%, 15%);
+    bottom: 0;
+    right: 0;
+  }
+
+  .gameOverContainer{
+    transform: scale(0.6);
+  }
+}
+
+/* mobile & tablet landscape */
+@media (max-width: 1280px) and (orientation: landscape){
+  .Board {
+    height: 65vh;
+    width: 87vh;
+    transform: translate(-50%, -50%);
+  }
+
+  .guideTextContainer {
+    width: 60%;
+    font-size: 2vh;
+  }
+
+  .guideTextContainer > img{
+    width: 100%;
+  }
+
+  .flip-card-button {
+    width: min(14vh, 10em);
+    height: min(18vh, 15em);
+  }
+  .flip-card-front > img, .flip-card-back > img {
+    width: 80%;
+  }
+  
+  .statistics {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    transform: translate(0, 70%);
+    font-size: 3vh;
+    font-weight: 800;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+    z-index: 99;
+  }
+
+  .score {
+    bottom: 0;
   }
 
   .app > .linkButton {
