@@ -25,7 +25,7 @@ You can try it online via GitHub Pages: [Click Here to Play](https://julianmenav
 <br>
 <img src="https://raw.githubusercontent.com/Julianmenav/stuff/main/memorygame/playingGame.png" alt="Logo" width="600">
 <br>
-<img src="https://raw.githubusercontent.com/Julianmenav/stuff/main/memorygame/gameOver.png" alt="Logo" width="600">
+<img src="https://raw.githubusercontent.com/Julianmenav/stuff/main/memorygame/gameover.gif" alt="Logo" width="600">
 
 ### Also responsive:
 
