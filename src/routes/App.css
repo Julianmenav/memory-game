@@ -80,6 +80,7 @@ body{
   width: 8em;
   height: 10em;
   margin: auto;
+  cursor: pointer;
 }
 
 .flip-card-button * {
