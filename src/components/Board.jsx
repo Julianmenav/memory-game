@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card.jsx";
-import getCards from "../utils/api"
-import shuffleCards from "../utils/shuffleCards"
-import boxHeader from "../assets/boxHeader.svg"
-
+import getCards from "../utils/api";
+import shuffleCards from "../utils/shuffleCards";
+import boxHeader from "../assets/boxHeader.svg";
 
 const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   const [loading, setLoading] = useState(true);
@@ -39,7 +38,7 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     setTimeout(() => {
       setInitialHide(false);
       setShowPhase(true);
-      
+
       setTimeout(() => {
         setShowPhase(false);
       }, showTime_ms);
@@ -55,8 +54,9 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     //Loss
     const lastID = idArray.slice(-1)[0];
     if (lastID !== spriteID) {
-      
-      return setTimeout( () => {setLoss(true)}, 300);
+      return setTimeout(() => {
+        setLoss(true);
+      }, 300);
     }
     //If Correct pair card, add id to the array:
     setIdArray((prev) => [...prev, spriteID]);
@@ -78,39 +78,48 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
       <div className="lossMessage">
         <p>GAME OVER</p>
       </div>
-      <button className="restartButton" onClick={restart}>REINICIAR PARTIDA</button>
+      <button className="restartButton" onClick={restart}>
+        REINICIAR PARTIDA
+      </button>
     </div>
   ) : null;
 
-  const cardsOrganization = numberOfCards >= 12 ? {
-    gridTemplateColumns: "none",
-    gridTemplateRows: "repeat(3, 1fr)",
-    gridAutoFlow: "column"
-  } : null
+  const cardsOrganization =
+    numberOfCards >= 12
+      ? {
+          gridTemplateColumns: "none",
+          gridTemplateRows: "repeat(3, 1fr)",
+          gridAutoFlow: "column",
+        }
+      : null;
 
-  return loading ? (
-    <h1>Cargando...</h1>
-  ) : (
+  return (
     <>
-      <div className="guideTextContainer" >
+      <div className="guideTextContainer">
         <img src={boxHeader} alt="" />
         {guideText}
       </div>
-      {gameOverElement}
-      <div className="shuffleCards" style={cardsOrganization}>
-        {cards.map((el, idx) => {
-          return (
-            <Card
-              sprite={el}
-              key={idx}
-              time={showTime_ms}
-              coveredTime={COVERED_TIME_MS}
-              compareCards={compareCards}
-              loss={loss}
-            />
-          );
-        })}
-      </div>
+      {loading ? (
+        <h1>Cargando...</h1>
+      ) : (
+        <>
+          {gameOverElement}
+          <div className="shuffleCards" style={cardsOrganization}>
+            {cards.map((el, idx) => {
+              return (
+                <Card
+                  sprite={el}
+                  key={idx}
+                  time={showTime_ms}
+                  coveredTime={COVERED_TIME_MS}
+                  compareCards={compareCards}
+                  loss={loss}
+                />
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 };
