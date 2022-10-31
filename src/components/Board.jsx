@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
-import { getCards, shuffleCards } from "../utils";
-import PropTypes from "prop-types";
-import boxHeader from "../images/boxHeader.svg"
+import Card from "./Card.jsx";
+import getCards from "../utils/api"
+import shuffleCards from "../utils/shuffleCards"
+import boxHeader from "../assets/boxHeader.svg"
+
 
 const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,6 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
 
   //When the components is rendered for the first time it gets sprites for cards from an API.
   useEffect(() => {
-    console.count("Obteniendo cartas...");
     const getSprites = async () => {
       //We only need half of the total number of cards since they go in pairs.
       const numberOfCardsNeeded = numberOfCards / 2;
@@ -31,9 +31,6 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
     };
     getSprites();
 
-    return () => {
-      console.log("Desmontando tablero");
-    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -116,13 +113,6 @@ const Board = ({ numberOfCards, time, levelUp, scoreUp, restart }) => {
       </div>
     </>
   );
-};
-
-Board.propTypes = {
-  numberOfCards: PropTypes.number,
-  time: PropTypes.number,
-  levelUp: PropTypes.func,
-  scoreUp: PropTypes.func
 };
 
 export default Board;

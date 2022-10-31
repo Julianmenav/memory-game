@@ -1,7 +1,8 @@
 import React from "react";
-import LinkButton from "../components/LinkButton";
+import LinkButton from "../../components/LinkButton";
+import title from "../../assets/title.png"
 import "./Home.css";
-import title from '../images/title.png'
+
 
 const Home = () => {
   return (
