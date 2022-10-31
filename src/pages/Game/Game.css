@@ -33,7 +33,7 @@ body{
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("../images/tablero.svg");
+  background-image: url("../../assets/tablero.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

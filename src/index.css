@@ -18,7 +18,7 @@ code {
 
 #bg-image {
   margin: 0;
-  background-image: url("./images/pokemonCenterBg.svg");
+  background-image: url("./assets/pokemonCenterBg.svg");
   filter: blur(5px);
   -webkit-filter: blur(5px);
   height: 100%;

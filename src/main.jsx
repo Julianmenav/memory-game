@@ -2,9 +2,10 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./routes/App";
-import Home from "./routes/Home";
-import NoPage from "./routes/NoPage";
+import Home from "./pages/Home/Home";
+import Game from "./pages/Game/Game";
+import NoPage from "./pages/NoPage/NoPage";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,7 @@ root.render(
       <Routes>
         <Route path="/" >
           <Route index element={<Home />} />
-          <Route path="game" element={<App />} />
+          <Route path="game" element={<Game />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

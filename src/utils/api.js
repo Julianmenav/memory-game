@@ -22,13 +22,4 @@ const getCards = async (numberOfCards) => {
   return cards;
 };
 
-
-//Input: Array of objects. Output: 2 shuffle arrays of objects.
-const shuffleCards = (cards) => {
-  const duplicatedArray = [...cards, ...cards];
-  const randomArray = [...duplicatedArray].sort(() => Math.random() - 0.5);
-
-  return randomArray;
-};
-
-export { getCards, shuffleCards };
+export default getCards;

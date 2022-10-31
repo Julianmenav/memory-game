@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./App.css";
-import Board from "../components/Board";
-import LinkButton from "../components/LinkButton";
-import levels from "../models/levels";
+import Board from "../../components/Board";
+import LinkButton from "../../components/LinkButton";
+import levels from "../../models/levels";
+import "./Game.css";
 
-function App() {
+
+function Game() {
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
   const [boardKey, setBoardKey] = useState(0);
@@ -46,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default Game;

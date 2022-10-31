@@ -1,6 +1,6 @@
 # Memory Card Game
 - The sprites of the cards are obtained through calls to the REST API: [PokeApi](https://pokeapi.co/)
-- Deployed via GitHub Pages
+- Deployed via GitHub Pages and built with Vite
 
 ## PLAY THE GAME
 You can try it online via GitHub Pages: [Click Here to Play](https://julianmenav.github.io/react-memory-game/)
