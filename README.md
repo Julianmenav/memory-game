@@ -3,7 +3,7 @@
 - Deployed via GitHub Pages and built with Vite
 
 ## PLAY THE GAME
-You can try it online via GitHub Pages: [Click Here to Play](https://julianmenav.github.io/react-memory-game/)
+You can try it online via GitHub Pages: [Click Here to Play](https://julianmenav.github.io/memory-game/)
 
 ## Tecnologies
 <div>
